@@ -25,14 +25,14 @@ js_dir = os.path.join(here, 'js')
 
 # Representative files that should exist after a successful build
 jstargets = [
-    os.path.join('./ipyleaflet/nbextension', 'index.js'),
-    os.path.join('./ipyleaflet/labextension', 'package.json'),
+    os.path.join('ipyleaflet/nbextension', 'index.js'),
+    os.path.join('ipyleaflet/labextension', 'package.json'),
 ]
 
 data_files_spec = [
-    ('share/jupyter/nbextensions/jupyter-leaflet', './ipyleaflet/nbextension', '*.*'),
-    ('share/jupyter/labextensions/jupyter-leaflet', './ipyleaflet/labextension', "**"),
-    ('etc/jupyter/nbconfig/notebook.d', '.', './jupyter-leaflet.json'),
+    ('share/jupyter/nbextensions/jupyter-leaflet', 'ipyleaflet/nbextension', '*.*'),
+    ('share/jupyter/labextensions/jupyter-leaflet', 'ipyleaflet/labextension', "**"),
+    ('etc/jupyter/nbconfig/notebook.d', '.', 'jupyter-leaflet.json'),
 ]
 
 cmdclass = create_cmdclass('jsdeps', data_files_spec=data_files_spec)
